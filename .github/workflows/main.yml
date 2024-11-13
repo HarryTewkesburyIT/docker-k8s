@@ -1,0 +1,13 @@
+name: Deploy React Test App
+on:
+  push:
+    branches:
+      - main # check your repo, your default branch might be master!
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: docker login -u harrytewkesburyit -p TcnB5S5krRT8KNv!
+      - run: docker build -t react-test-app/0.1 -f ./client/Dockerfile.dev
