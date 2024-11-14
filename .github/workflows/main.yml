@@ -20,9 +20,9 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_ACCESS_KEY_SECRET }}
-          application_name: test-react-docker
-          environment_name: Test-react-docker-env
+          application_name: frontend
+          environment_name: Frontend-dev
           existing_bucket_name: elasticbeanstalk-ca-central-1-499090944509
-          region: ca-central-1
+          region: us-east-1
           version_label: ${{ github.sha }}
           deployment_package: deploy.zip
